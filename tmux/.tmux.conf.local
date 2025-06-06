@@ -12,3 +12,5 @@ set-option -g allow-rename off
 
 # 4. フォント幅のズレ対策（tmux 3.2以降）
 set -as terminal-overrides ',xterm-256color:Tc'
+
+set -g mouse on
