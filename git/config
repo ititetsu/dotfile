@@ -1,0 +1,9 @@
+[http]
+	proxy = http://150.61.8.70:10080
+[https]
+	proxy = http://150.61.8.70:10080
+[user]
+	email = miyakusa.ittetsu@mail.canon
+	name = miyakusa
+[credential]
+	helper = store

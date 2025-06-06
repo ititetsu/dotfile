@@ -1,0 +1,27 @@
+
+
+# Proxy
+source ~/.config/.zsh/proxy.zsh
+
+# oh-my-zsh
+source ~/.config/.zsh/ohmy.zsh
+
+# プラグイン・補完など
+source ~/.config/.zsh/plugins.zsh
+
+# その他の設定（履歴、オプション、プロキシなど）
+source ~/.config/.zsh/extras.zsh
+
+# エイリアス
+source ~/.config/.zsh/alias.zsh
+
+# fnm
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$HOME/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
