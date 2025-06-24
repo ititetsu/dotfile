@@ -35,3 +35,5 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to Declaration" })
 -- 定義を分割ウィンドウで開く
 vim.keymap.set("n", "<leader>gd", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", { desc = "Go to Definition in split" })
+
+vim.keymap.set("n", "<leader>2", vim.lsp.buf.rename, {desc = "rename"})

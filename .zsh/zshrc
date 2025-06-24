@@ -1,4 +1,4 @@
-
+ZSH_THEME="dracula/dracula" # set by `omz`
 
 # Proxy
 source ~/.config/.zsh/proxy.zsh

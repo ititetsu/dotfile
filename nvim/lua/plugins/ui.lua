@@ -159,11 +159,16 @@ return { -- {
 
     hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
   end
-}, {
+},
+{
   "nvim-tree/nvim-web-devicons",
   lazy = false,
   priority = 1000,
   config = function()
-    require("nvim-web-devicons").setup({})
-  end
-}}
+    require("nvim-web-devicons").setup({
+      color_icons = true,
+      default = true,
+    })
+  end,
+},
+}

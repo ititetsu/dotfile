@@ -18,6 +18,8 @@ vim.opt.hlsearch = true   -- 検索結果をハイライト
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 
+vim.opt.wrap = false
+
 -- スクロール時の余白
 vim.opt.scrolloff = 8
 
@@ -102,4 +104,26 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
+})
+
+
+-- vim.cmd [[
+--   highlight CursorLine guibg=#44475a
+--   highlight CursorColumn guibg=#44475a
+-- ]]
+
+vim.opt.list = true
+vim.opt.listchars = {
+  tab = '»·',
+  trail = '·',
+  extends = '»',
+  precedes = '«',
+  nbsp = '%'
+}
+
+vim.cmd [[highlight ExtraWhitespace ctermbg=red guibg=red]]
+vim.cmd [[match ExtraWhitespace /\s\+$/]]
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*",
+    command = ":%s/\\s\\+$//e"
 })

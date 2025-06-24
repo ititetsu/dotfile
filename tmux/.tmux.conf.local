@@ -1,16 +1,10 @@
 # ~/.tmux.conf.local
 
-# 1. ターミナルタイプを明示的に変更（重要）
-set -g default-terminal "xterm-256color"
-
-# 2. Unicode対応
-set -g utf8 on
-set -g status-utf8 on
-
-# 3. ウィンドウ名の自動変更を無効化（描画バグ防止）
 set-option -g allow-rename off
 
-# 4. フォント幅のズレ対策（tmux 3.2以降）
-set -as terminal-overrides ',xterm-256color:Tc'
+set -g utf8 on
+set -g status-utf8 on
+set -g default-terminal "screen-256color"
+set -as terminal-overrides ",xterm-256color:Tc"
 
 set -g mouse on
