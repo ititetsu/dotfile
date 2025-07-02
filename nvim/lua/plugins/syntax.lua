@@ -3,7 +3,17 @@ return {{
   event = {'BufNewFile', 'BufRead'},
   build = ":TSUpdate",
   opts = {
-    ensure_installed = {"lua", "vim", "bash", "typescript", "c", "python", "rust", "markdown"},
+    ensure_installed = {
+        "lua",
+        "vim",
+        "bash",
+        "typescript",
+        "c",
+        "python",
+        "rust",
+        "markdown",
+        "groovy"
+    },
     highlight = {
       enable = true
     },
@@ -12,7 +22,4 @@ return {{
     },
     sync_install = true
   }
-} -- Markdown/AsciiDoc用
--- { "preservim/vim-markdown" },
--- { "habamax/vim-asciidoctor" },
-}
+}}
